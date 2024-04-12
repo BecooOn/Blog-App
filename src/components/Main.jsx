@@ -20,7 +20,10 @@ function Main({ cardCount, setCardCount, currentPage, itemsPerPage }) {
     for (let i = startIndex; i < endIndex; i++) {
       const cardId = uuidv4();
       newCards.push(
-        <Col key={cardId} className="mt-5">
+        <Col
+          key={cardId}
+          className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mt-5 d-flex justify-content-center"
+        >
           <Card style={{ width: "14rem" }}>
             <Card.Body>
               <Card.Title className="d-flex justify-content-between">
@@ -54,6 +57,7 @@ function Main({ cardCount, setCardCount, currentPage, itemsPerPage }) {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
+      setCardCount(100);
     }, 3000);
   }, []);
 
@@ -70,7 +74,8 @@ function Main({ cardCount, setCardCount, currentPage, itemsPerPage }) {
   if (loading) {
     return (
       <Container className="d-flex justify-content-center align-items-center mt-5">
-        <img src="./img/loading.gif" width={100}></img><span>Loading...</span>
+        <img src="./img/loading.gif" width={100}></img>
+        <span>Loading...</span>
       </Container>
     );
   }
@@ -78,7 +83,7 @@ function Main({ cardCount, setCardCount, currentPage, itemsPerPage }) {
     if (cards.length === 0) {
       return (
         <div className="d-flex justify-content-center align-items-center fs-1 text-primary">
-          There is no item
+          There is no item...
         </div>
       );
     } else {
@@ -89,7 +94,11 @@ function Main({ cardCount, setCardCount, currentPage, itemsPerPage }) {
   return (
     <Container>
       {renderContent()}
-      <Modal show={showModal} onHide={() => setShowModal(false)}>
+      <Modal
+        show={showModal}
+        onHide={() => setShowModal(false)}
+        className="mt-5"
+      >
         <Modal.Header closeButton>
           <Modal.Title>Comment Title</Modal.Title>
         </Modal.Header>

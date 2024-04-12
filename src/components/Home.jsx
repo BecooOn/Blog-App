@@ -4,7 +4,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 const Home = () => {
-  const [cardCount, setCardCount] = useState(100);
+  const [cardCount, setCardCount] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
 
   const itemsPerPage = 10;
