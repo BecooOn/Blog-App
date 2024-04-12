@@ -24,7 +24,7 @@ function Main({ cardCount, setCardCount, currentPage, itemsPerPage }) {
           key={cardId}
           className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 mt-5 d-flex justify-content-center"
         >
-          <Card style={{ width: "14rem" }}>
+          <Card style={{ width: "15rem" }}>
             <Card.Body>
               <Card.Title className="d-flex justify-content-between">
                 Comment

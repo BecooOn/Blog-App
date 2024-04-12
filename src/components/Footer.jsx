@@ -32,7 +32,7 @@ function Footer({ currentPage, setCurrentPage, totalPages }) {
   }
 
   return (
-    <div className="d-flex justify-content-center py-4 bg-warning fixed-bottom footer">
+    <div className="d-flex justify-content-center py-4 bg-warning footer mt-5">
       <Pagination size={size} className="pagination">
         {items}
       </Pagination>
